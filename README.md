@@ -6,7 +6,7 @@ https://www.monarq.ca/guide/how-install-drupal-lando
 Clone this repo:
 git clone git@github.com:jm-monarq/drupal-cms-lando.git
 
-`cd drupal-cms`
+`cd drupal-cms-lando`
 
 Run the following commands:
 
