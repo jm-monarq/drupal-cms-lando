@@ -1,0 +1,20 @@
+name: 'Page'
+description: 'A basic content type to create simple pages.'
+type: 'Drupal CMS'
+recipes:
+  - core/recipes/tags_taxonomy
+  - drupal_cms_content_type_base
+config:
+  strict: false
+  actions:
+    core.entity_view_display.node.page.default:
+      enableLayoutBuilder: {  }
+      allowLayoutOverrides: true
+    user.role.content_editor:
+      grantPermissions:
+        - 'create page content'
+        - 'delete page revisions'
+        - 'delete any page content'
+        - 'edit any page content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['page']

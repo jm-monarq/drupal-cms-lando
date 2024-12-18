@@ -1,0 +1,23 @@
+name: drupal-cms
+recipe: drupal10
+config:
+  webroot: web
+  php: 8.3
+
+env_file:
+  - lando/lando.env
+
+services:
+  database:
+    type: mariadb:10.6
+    creds:
+      user: drupal-cms
+      password: drupal-cms
+      database: drupal-cms
+
+tooling:
+  drush:
+    cmd: /app/vendor/drush/drush/drush
+  install-site:
+    service: appserver
+    cmd: /app/vendor/drush/drush/drush si --db-url=mysql://drupal-cms:drupal-cms@database/drupal-cms
