@@ -12,7 +12,9 @@ Navigate to the project directory:
 Run the following commands:
 
 `lando start`
+
 `lando composer install`
+
 `lando install-site`
 
 visit URL
